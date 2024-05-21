@@ -1,3 +1,4 @@
+/* variables generales*/
 :root {
     --WHITE: #FFFFFF;
     --black: #000000; 
@@ -15,7 +16,7 @@ body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
 }
-
+/* navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -95,7 +96,7 @@ nav {
 .navbar-email img {
     transform: rotate(90deg);
 }
-
+/* mendu desktop*/
 .desktop-menu {
     position: absolute;
     background:var(--WHITE);
@@ -138,8 +139,50 @@ nav {
     display: inline-block;
 
 }
+/* menu mobile */
+.mobile-menu {
+    position: absolute;
+    top: 60px;
+    padding: 24px;
+    height: 92vh;
+    
+}
+.mobile-menu a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    /* margin-bottom: 24px; */
+}
 
-@media (max-width: 856px) {
+.mobile-menu ul {
+    padding: 0;
+    margin: 24px 0 0;
+    list-style: none;
+}
+
+.mobile-menu ul:nth-child(1) {
+    border-bottom: 1px solid var(--very-light-pink);
+
+}
+        
+.mobile-menu ul li {
+    margin-bottom: 24px;
+}
+
+
+.mobile-menu .email {
+    font-size: var(--sm);
+    font-weight: 300;
+}
+
+.mobile-menu .sign-out {
+    font-size: var(--sm);
+    color: var(--hospital-green);
+ 
+}
+
+
+@media (max-width: 640px) {
     .menu {
         display: block;
     }
@@ -152,4 +195,13 @@ nav {
     .flechita-email { 
         display: none;
     }
+    .desktop-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 641px) {
+.mobile-menu {
+    display: none;
+}
 }
